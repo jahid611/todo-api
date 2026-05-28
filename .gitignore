@@ -1,0 +1,9 @@
+node_modules/
+*.db
+.env
+.env.*
+*.log
+coverage/
+.nyc_output/
+.DS_Store
+ssh-keygen*

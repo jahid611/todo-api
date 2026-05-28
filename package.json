@@ -1,0 +1,23 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "API REST de gestion de taches avec auth JWT et SQLite",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --experimental-test-coverage tests/server.test.js",
+    "lint": "eslint src/ tests/",
+    "db:init": "node src/db-init.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "better-sqlite3": "^11.0.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

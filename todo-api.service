@@ -1,0 +1,23 @@
+[Unit]
+Description=Todo API - REST API Node.js avec JWT et SQLite
+After=network.target
+
+[Service]
+Type=simple
+User=todoapp
+Group=todoapp
+WorkingDirectory=/opt/todo-api
+EnvironmentFile=/opt/todo-api/.env
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=todo-api
+NoNewPrivileges=true
+ProtectSystem=strict
+PrivateTmp=true
+ReadWritePaths=/var/lib/todo-api /var/log/todo-api
+
+[Install]
+WantedBy=multi-user.target
